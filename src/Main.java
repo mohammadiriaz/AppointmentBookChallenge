@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.io.IOException;
 
 
 public class Main {
@@ -15,7 +16,7 @@ public class Main {
         for (int i = 5; i < 30; i++) schedule[3][i] = true;
         for (int i = 44; i < 60; i++) schedule[3][i] = true;
 
-        System.out.println(reads());
+        System.out.println(read());
     }
 
     public static boolean[][] readSchedule(String lines) {
@@ -31,7 +32,7 @@ public class Main {
         return schedule;
     }
 
-    public static int reads() throws FileNotFoundException{
+    public static int read() throws FileNotFoundException{
         int meetings = 0;
         File f = new File("Schedules.txt");
         Scanner s = new Scanner(f);
